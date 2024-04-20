@@ -4,6 +4,7 @@ from abc import ABC, abstractmethod
 class Character(ABC):
     """Abstract base class for characters."""
 
+    @abstractmethod
     def __init__(self, first_name, is_alive=True):
         """Constructor for Character class."""
 
@@ -20,7 +21,12 @@ class Character(ABC):
 class Stark(Character):
     """Represents a member of the Stark family."""
 
+    def __init__(self, first_name, is_alive=True):
+        """Constructor for Stark class."""
+
+        super().__init__(first_name, is_alive)
+
     def die(self):
         """Marks the Stark character as dead."""
 
-        self.is_alive = False
+        super().die()
