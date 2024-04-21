@@ -20,19 +20,19 @@ class calculator:
         self.vector = [x + object for x in self.vector]
 
     @print
-    def __mul__(self, object) -> None:
+    def __mul__(self, object: int) -> None:
         """Multiply the vector by a value."""
 
         self.vector = [x * object for x in self.vector]
 
     @print
-    def __sub__(self, object) -> None:
+    def __sub__(self, object: int) -> None:
         """Subtract a value from the vector."""
 
         self.vector = [x - object for x in self.vector]
 
     @print
-    def __truediv__(self, object) -> None:
+    def __truediv__(self, object: int) -> None:
         """Divide the vector by a value."""
 
         assert object != 0, "Cannot divide by zero."

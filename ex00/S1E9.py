@@ -5,13 +5,12 @@ class Character(ABC):
     """Abstract base class for characters."""
 
     @abstractmethod
-    def __init__(self, first_name, is_alive=True):
+    def __init__(self, first_name: str, is_alive=True):
         """Constructor for Character class."""
 
         self.first_name = first_name
         self.is_alive = is_alive
 
-    @abstractmethod
     def die(self):
         """Kill the character."""
 
@@ -21,12 +20,7 @@ class Character(ABC):
 class Stark(Character):
     """Represents a member of the Stark family."""
 
-    def __init__(self, first_name, is_alive=True):
+    def __init__(self, first_name: str, is_alive=True):
         """Constructor for Stark class."""
 
         super().__init__(first_name, is_alive)
-
-    def die(self):
-        """Marks the Stark character as dead."""
-
-        super().die()
