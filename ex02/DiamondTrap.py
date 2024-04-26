@@ -28,6 +28,3 @@ class King(Baratheon, Lannister):
         """Return the hair color of the King."""
 
         return self.hairs
-
-    _eyes = property(get_eyes, set_eyes)
-    _hairs = property(get_hairs, set_hairs)
